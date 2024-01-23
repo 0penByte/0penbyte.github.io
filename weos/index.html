@@ -6,7 +6,11 @@
         <title>weOS</title>
     </head>
     <body>
-        <h1><img src="assets/logo.png" alt="weOS" class="welogo"></h1>
+        <h1 class="hidden"></h1>
+        <picture>
+            <source srcset="assets/logo-darkmode.svg" media="(prefers-color-scheme: dark)">
+            <img class="welogo" src="assets/logo-lightmode.svg" alt="weOS" role="img">
+        </picture>
         <h2>hello leakers</h2>
         <button class="download"><a class="downloadtext" href="http://example.com">Download</a></button>
         <p>TODO: put proper text here and get a better font</p>
