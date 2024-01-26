@@ -12,6 +12,7 @@ html {
     max-height: 36px;
 }
 
+/* Mobile menu styling */
 .mobile-header {
     display: flex;
     width: 100%;
