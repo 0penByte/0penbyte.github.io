@@ -3,12 +3,7 @@
 }
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: black;
-    }
-    .project {
-        background: #222;
-    }
-    .comingsoon {
+        background: black;
         color: white;
     }
 }
