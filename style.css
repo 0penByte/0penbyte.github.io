@@ -1,13 +1,47 @@
+* {
+    font-family: sans-serif;
+}
 .hidden {
     display: none;
 }
+/* Dark mode colors */
 @media (prefers-color-scheme: dark) {
     html {
         background: black;
         color: white;
     }
 }
-@media not (max-width: 720px) {
+
+.logo {
+    max-height: 24px;
 }
+
+.mobile-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.mobile-menu::-webkit-details-marker {
+    display: none;
+}
+.mobile-menu::marker {
+    content: ""
+}
+.mobile-menu::after {
+    content: "\2630"; /* Unicode for hamburger icon */
+    margin-left: 8px; /* Add some spacing between the icon and the text */
+}
+
+/* Desktop-specific code */
+@media not (max-width: 720px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* Mobile-specific code */
 @media (max-width: 720px) {
+    .desktop-header {
+        display: none;
+    }
 }
