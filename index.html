@@ -8,7 +8,13 @@
     <body>
         <h1 class="hidden">OpenByte</h1>
         <header class="desktop-header">
-            <p>hi on desktop</p>
+            <picture>
+                <source srcset="assets/logo-darkmode.svg" media="(prefers-color-scheme: dark)">
+                <img class="logo" src="assets/logo-lightmode.svg" alt="OpenByte" role="img">
+            </picture>
+            <b class="menulink">Home</b>
+            <a class="menulink" href="projects.html">Projects</a>
+            <a class="menulink" href="development.html">Development</a>
         </header>
         <header class="mobile-header">
             <picture>
@@ -17,9 +23,9 @@
             </picture>
             <details>
                 <summary class="mobile-menu">Menu</summary>
-                <p class="mobile-menuitem"><b class="mobile-menulink">Home</b></p>
-                <p class="mobile-menuitem"><a class="mobile-menulink" href="projects.html">Projects</a></p>
-                <p class="mobile-menuitem"><a class="mobile-menulink" href="development.html">Development</a></p>
+                <p class="mobile-menuitem"><b class="menulink">Home</b></p>
+                <p class="mobile-menuitem"><a class="menulink" href="projects.html">Projects</a></p>
+                <p class="mobile-menuitem"><a class="menulink" href="development.html">Development</a></p>
             </details>
         </header>
     </body>

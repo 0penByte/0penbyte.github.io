@@ -12,33 +12,7 @@ html {
     max-height: 36px;
 }
 
-/* Mobile menu styling */
-.mobile-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.mobile-menu {
-    text-align: right;
-    font-size: x-large;
-}
-.mobile-menu:hover {
-    cursor: pointer;
-}
-.mobile-menu::-webkit-details-marker {
-    display: none;
-}
-.mobile-menu::marker {
-    content: ""
-}
-.mobile-menu::after {
-    content: "\2630"; /* Unicode for hamburger icon */
-    margin-left: 8px; /* Add some spacing between the icon and the text */
-}
-.mobile-menuitem {
-    text-align: right;
-}
-.mobile-menulink:link,.mobile-menulink:visited {
+.menulink:link,.menulink:visited {
     color: black;
     text-decoration: none;
 }
@@ -49,7 +23,7 @@ html {
         background: black;
         color: white;
     }
-    .mobile-menulink:link,.mobile-menulink:visited {
+    .menulink:link,.menulink:visited {
         color: white;
     }
 }
@@ -59,11 +33,45 @@ html {
     .mobile-header {
         display: none;
     }
+    .desktop-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .menulink {
+        margin: 0 0 0 35px;
+        font-size: larger;
+    }
 }
 
 /* Mobile-specific code */
 @media (max-width: 720px) {
     .desktop-header {
         display: none;
+    }
+    .mobile-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .mobile-menu {
+        text-align: right;
+        font-size: x-large;
+    }
+    .mobile-menu:hover {
+        cursor: pointer;
+    }
+    .mobile-menu::-webkit-details-marker {
+        display: none;
+    }
+    .mobile-menu::marker {
+        content: ""
+    }
+    .mobile-menu::after {
+        content: "\2630"; /* Unicode for hamburger icon */
+        margin-left: 8px; /* Add some spacing between the icon and the text */
+    }
+    .mobile-menuitem {
+        text-align: right;
     }
 }
