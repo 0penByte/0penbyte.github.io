@@ -22,6 +22,9 @@ html {
     text-align: right;
     font-size: x-large;
 }
+.mobile-menu:hover {
+    cursor: pointer;
+}
 .mobile-menu::-webkit-details-marker {
     display: none;
 }
