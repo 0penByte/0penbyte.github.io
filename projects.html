@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet">
+        <title>OpenByte</title>
+    </head>
+    <body>
+        <h1 class="hidden">OpenByte</h1>
+        <header class="desktop-header">
+            <a href="index.html">
+                <picture>
+                    <source srcset="assets/logo-darkmode.svg" media="(prefers-color-scheme: dark)">
+                    <img class="logo" src="assets/logo-lightmode.svg" alt="OpenByte" role="img">
+                </picture>
+            </a>
+            <a class="menulink" href="index.html">Home</a>
+            <b class="menulink">Projects</b>
+            <a class="menulink" href="development.html">Development</a>
+        </header>
+        <header class="mobile-header">
+            <picture>
+                <source srcset="assets/logo-darkmode.svg" media="(prefers-color-scheme: dark)">
+                <img class="logo" src="assets/logo-lightmode.svg" alt="OpenByte" role="img">
+            </picture>
+            <details>
+                <summary class="mobile-menu">Menu</summary>
+                <p class="mobile-menuitem"><a class="menulink" href="index.html">Home</a></p>
+                <p class="mobile-menuitem"><b class="menulink">Projects</b></p>
+                <p class="mobile-menuitem"><a class="menulink" href="development.html">Development</a></p>
+            </details>
+        </header>
+        <section>
+            <a href="weos/index.html" class="unstyled-link">
+                <article>
+                    <div>
+                        <h2>weOS</h2>
+                        <p>Simple, easy to use Linux-based operating system made to run on almost any hardware.</p>
+                    </div>
+                    <picture>
+                        <source srcset="assets/weos-dark.png" media="(prefers-color-scheme: dark)">
+                        <img class="project-image" src="assets/weos-light.png" alt="Screenshot of the weOS desktop">
+                    </picture>
+                </article>
+            </a>
+            <article>
+                <div>
+                    <h2>Amber</h2>
+                    <p>Secure and easy to use web browser designed to follow the weOS style.</p>
+                </div>
+                <picture class="project-image-left">
+                    <source srcset="assets/weos-dark.png" media="(prefers-color-scheme: dark)">
+                    <img class="project-image" src="assets/weos-light.png" alt="Placeholder image">
+                </picture>
+            </article>
+        </section>
+    </body>
+</html>

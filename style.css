@@ -1,50 +1,105 @@
+* {
+    font-family: sans-serif;
+}
 html {
-    padding: 0 25px;
+    padding: 10px;
 }
 .hidden {
     display: none;
 }
+
 .logo {
-    display: block;
-    width: 400px;
-    margin: 100px auto 20px auto;
+    max-height: 36px;
 }
-@media (orientation: portrait) and (max-width: 720px) {
-    .logo {
-        width: 90%;
-    }
+
+.menulink:link,.menulink:visited,.unstyled-link:link,.unstyled-link:visited {
+    color: black;
+    text-decoration: none;
 }
-.welogo {
-    display: block;
-    max-height: 100px;
-    margin: 0 auto;
+
+.project-image {
+    height: 150px;
 }
-.project {
-    background: #ddd;
-    margin: 25px;
-    padding: 25px;
-    flex: 150px;
-    border-radius: 25px;
-}
-.comingsoon {
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: xx-large;
-    text-align: center;
-}
+
 section {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    flex: 200px;
 }
+article {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+/* Dark mode colors */
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: black;
-    }
-    .project {
-        background: #222;
-    }
-    .comingsoon {
+        background: black;
         color: white;
+    }
+    .menulink:link,.menulink:visited,.unstyled-link:link,.unstyled-link:visited {
+        color: white;
+    }
+}
+
+/* Desktop-specific code */
+@media not (max-width: 720px) {
+    .mobile-header {
+        display: none;
+    }
+    .desktop-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .menulink {
+        margin: 0 0 0 35px;
+        font-size: larger;
+    }
+    .project-image-left {
+        order: -1;
+    }
+}
+
+/* Mobile-specific code */
+@media (max-width: 720px) {
+    .desktop-header {
+        display: none;
+    }
+    .mobile-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .mobile-menu {
+        text-align: right;
+        font-size: x-large;
+    }
+    .mobile-menu:hover {
+        cursor: pointer;
+    }
+    .mobile-menu::-webkit-details-marker {
+        display: none;
+    }
+    .mobile-menu::marker {
+        content: ""
+    }
+    .mobile-menu::after {
+        content: "\2630"; /* Unicode for hamburger icon */
+        margin-left: 8px; /* Add some spacing between the icon and the text */
+    }
+    .mobile-menuitem {
+        text-align: right;
+    }
+    .project-image {
+        height: auto;
+        width: 95%;
+        margin: 0 auto;
+        display: block;
     }
 }
