@@ -12,9 +12,26 @@ html {
     max-height: 36px;
 }
 
-.menulink:link,.menulink:visited {
+.menulink:link,.menulink:visited,.unstyled-link:link,.unstyled-link:visited {
     color: black;
     text-decoration: none;
+}
+
+.project-image {
+    height: 150px;
+}
+
+section {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 200px;
+}
+article {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin: 25px 0;
 }
 
 /* Dark mode colors */
@@ -23,7 +40,7 @@ html {
         background: black;
         color: white;
     }
-    .menulink:link,.menulink:visited {
+    .menulink:link,.menulink:visited,.unstyled-link:link,.unstyled-link:visited {
         color: white;
     }
 }
@@ -41,6 +58,9 @@ html {
     .menulink {
         margin: 0 0 0 35px;
         font-size: larger;
+    }
+    .project-image-left {
+        order: -1;
     }
 }
 
@@ -74,5 +94,11 @@ html {
     }
     .mobile-menuitem {
         text-align: right;
+    }
+    .project-image {
+        height: auto;
+        width: 95%;
+        margin: 0 auto;
+        display: block;
     }
 }
